@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/oauth2-gateway-8000/oauth2-gateway-8000.iml" filepath="$PROJECT_DIR$/oauth2-gateway-8000/oauth2-gateway-8000.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth2-resource-a-8001/oauth2-resource-a-8001.iml" filepath="$PROJECT_DIR$/oauth2-resource-a-8001/oauth2-resource-a-8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth2-resource-b-8002/oauth2-resource-b-8002.iml" filepath="$PROJECT_DIR$/oauth2-resource-b-8002/oauth2-resource-b-8002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth2-server-9000/oauth2-server-9000.iml" filepath="$PROJECT_DIR$/oauth2-server-9000/oauth2-server-9000.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauth2-server-resource-client.iml" filepath="$PROJECT_DIR$/oauth2-server-resource-client.iml" />
+    </modules>
+  </component>
+</project>

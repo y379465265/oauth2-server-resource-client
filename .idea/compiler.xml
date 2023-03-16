@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="oauth2-resource-b-8002" />
+        <module name="oauth2-server-9000" />
+        <module name="oauth2-gateway-8000" />
+        <module name="oauth2-resource-a-8001" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="oauth2-gateway-8000" target="8" />
+      <module name="oauth2-resource-a-8001" target="8" />
+      <module name="oauth2-resource-b-8002" target="8" />
+      <module name="oauth2-server-9000" target="8" />
+      <module name="oauth2-server-resource-client" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="oauth2-resource-a-8001" options="" />
+      <module name="oauth2-resource-b-8002" options="" />
+      <module name="oauth2-server-9000" options="" />
+    </option>
+  </component>
+</project>

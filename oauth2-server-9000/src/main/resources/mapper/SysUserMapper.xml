@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.izejin.dao.SysUserDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.izejin.entity.SysUser">
+        <id column="id" property="id" />
+        <result column="ent_id" property="entId" />
+        <result column="ent_name" property="entName" />
+        <result column="ent_code" property="entCode" />
+        <result column="login_name" property="loginName" />
+        <result column="user_name" property="userName" />
+        <result column="login_password" property="loginPassword" />
+        <result column="state" property="state" />
+        <result column="mobile_no" property="mobileNo" />
+        <result column="office_no" property="officeNo" />
+        <result column="email" property="email" />
+        <result column="logged_state" property="loggedState" />
+        <result column="frozen_state" property="frozenState" />
+        <result column="issue_cert_state" property="issueCertState" />
+        <result column="cert_no" property="certNo" />
+        <result column="cert_type" property="certType" />
+        <result column="cert_start_date" property="certStartDate" />
+        <result column="cert_end_date" property="certEndDate" />
+        <result column="count" property="count" />
+        <result column="id_check_state" property="idCheckState" />
+        <result column="face_check_state" property="faceCheckState" />
+        <result column="remark" property="remark" />
+        <result column="create_datetime" property="createDatetime" />
+        <result column="creator_id" property="creatorId" />
+        <result column="creator" property="creator" />
+        <result column="modify_datetime" property="modifyDatetime" />
+        <result column="modifier_id" property="modifierId" />
+        <result column="modifier" property="modifier" />
+        <result column="modify_version" property="modifyVersion" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, ent_id, ent_name, ent_code, login_name, user_name, login_password, state, mobile_no, office_no, email, logged_state, frozen_state, issue_cert_state, cert_no, cert_type, cert_start_date, cert_end_date, count, id_check_state, face_check_state, remark, create_datetime, creator_id, creator, modify_datetime, modifier_id, modifier, modify_version
+    </sql>
+
+</mapper>

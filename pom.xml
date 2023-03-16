@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.tuwer</groupId>
+	<artifactId>oauth2-server-resource-client</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<modules>
+		<module>oauth2-resource-a-8001</module>
+		<module>oauth2-resource-b-8002</module>
+		<module>oauth2-server-9000</module>
+		<module>oauth2-gateway-8000</module>
+	</modules>
+	<packaging>pom</packaging>
+
+	<properties>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+		<mysql-connector-java.version>8.0.29</mysql-connector-java.version>
+		<lombok.version>1.18.22</lombok.version>
+		<log4j.version>1.2.17</log4j.version>
+		<fastjson2.version>2.0.3</fastjson2.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<sentinel.version>2.0.0.RELEASE</sentinel.version>
+		<baomidou.version>3.2.0</baomidou.version>
+		<spring-cloud-alibaba-dependencies.version>2021.1</spring-cloud-alibaba-dependencies.version>
+		<nacos.version>2.2.0.RELEASE</nacos.version>
+		<springboot.version>2.6.11</springboot.version>
+		<springCloud.version>2021.0.4</springCloud.version>
+		<oauth2Server.version>0.2.3</oauth2Server.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
+				<version>${nacos.version}</version>
+			</dependency>
+
+			<!--spring-cloud-dependencies-->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${springCloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- Spring Cloud Alibaba-->
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+				<version>${spring-cloud-alibaba-dependencies.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+				<version>${sentinel.version}</version>
+			</dependency>
+			<!-- spring-boot-dependencies-->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${springboot.version}</version>
+				<type>pom</type>
+				<!--<scope>provided</scope>-->
+				<scope>import</scope>
+			</dependency>
+			<!-- Spring Security OAuth2 依赖 -->
+			<!-- 授权服务器 Spring Authorization Server-->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-oauth2-authorization-server</artifactId>
+				<version>${oauth2Server.version}</version>
+			</dependency>
+			<!-- mysql-connector-java -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql-connector-java.version}</version>
+			</dependency>
+			<!--fastjson-->
+			<dependency>
+				<groupId>com.alibaba.fastjson2</groupId>
+				<artifactId>fastjson2</artifactId>
+				<version>${fastjson2.version}</version>
+			</dependency>
+			<!--lombok-->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+			<!--日志-->
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<!-- StringUtils -->
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-generator</artifactId>
+				<version>${baomidou.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
+

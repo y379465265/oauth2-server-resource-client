@@ -1,0 +1,40 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    # 应用名称
+    name: oauth2-resource-a-8001
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/oauth2-server-resource-client?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+  cloud:
+    bootstrap:
+      enable: true
+    sentinel:
+      enabled: true
+      transport:
+        dashboard: localhost:8880 #控制台地址
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #注册中心使用nacos
+      config:
+        server-addr: 127.0.0.1:8848 #配置中心使用nacos
+        file-extension: yml #配置文件后缀
+
+# 自定义 jwt 配置（校验jwt）
+jwt:
+  cert-info:
+    # 公钥证书存放位置
+    public-key-location: myjks.cer
+  claims:
+    # 令牌的鉴发方：即授权服务器的地址
+    issuer: http://os.com:9000
+    # 令牌有效时间（单位：秒）；设为0时，和令牌实际时间一致。
+    # 如果大于0，就是在原来过期时间的基础再加上这个值
+    #expires-at: 0
+
